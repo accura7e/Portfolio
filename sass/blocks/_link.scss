@@ -7,4 +7,18 @@
     &:hover{
         color: $accent-color-hover;
     }
+
+    @media (max-width: 1139px) {
+
+    }
+    
+    /* Mobile */
+    @media (max-width: 899px) {
+        font-size: 18px;
+    }
+    
+    /* Mobile XS */
+    @media (max-width: 767px) {
+    
+    }
 }

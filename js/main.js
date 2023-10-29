@@ -22,7 +22,6 @@ tabBtns.forEach(function(item){
     
 })
 
-
 const formFields = document.querySelectorAll('.form__item-field');
 
 formFields.forEach(function(item){
@@ -43,3 +42,15 @@ formFields.forEach(function(item){
 
   
 })
+
+const burgerBtn = document.querySelector('.header__burger');
+const burgerNav = document.querySelector('.header__burger-menu');
+const burgerOverlay = document.querySelector('.menu__overlay')
+burgerBtn.addEventListener('click', function(){
+    burgerBtn.classList.toggle('header__burger--active')
+    burgerNav.classList.toggle('header__burger-menu--active')
+    burgerOverlay.classList.toggle('menu__overlay--active')  
+})
+
+
+

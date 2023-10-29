@@ -10,4 +10,19 @@
     &:hover{
         opacity: 0.75;
     }
+
+    @media (max-width: 1139px) {
+
+    }
+    
+    /* Mobile */
+    @media (max-width: 899px) {
+        height: 38px;
+        width: 38px;
+    }
+    
+    /* Mobile XS */
+    @media (max-width: 767px) {
+    
+    }
 }

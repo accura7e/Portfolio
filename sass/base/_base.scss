@@ -6,6 +6,7 @@ html {
 }
 
 body {
+    position: relative;
 	min-height: 100vh; /* sticky footer */
 	display: flex; /* sticky footer */
 	flex-direction: column; /* sticky footer */
@@ -38,8 +39,7 @@ section {
 /* Grid styles */
 
 .container {
-	max-width: 1140px;
-    width: 100%;
+	width: 1140px;
 	margin-left: auto;
     margin-right: auto;
 	padding-left: 15px;
@@ -54,18 +54,18 @@ section {
     }
 
     /* Tablet */
-    @media (max-width: 1199px) {
-
+    @media (max-width: 1139px) {
+        width: 900px;
     }
 
     /* Mobile */
     @media (max-width: 899px) {
-
+        width: 768px;
     }
 
     /* Mobile XS */
-    @media (max-width: 599px) {
-   
+    @media (max-width: 767px) {
+        width: 320px;
     }
 }
 
