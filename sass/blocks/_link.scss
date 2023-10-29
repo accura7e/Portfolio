@@ -1,0 +1,10 @@
+.link{
+    color: $link-color;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.3;
+    transition: color .3s;
+    &:hover{
+        color: $accent-color-hover;
+    }
+}

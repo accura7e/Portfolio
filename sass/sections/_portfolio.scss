@@ -1,0 +1,29 @@
+
+.portfolio {
+    padding-top: 80px;
+    padding-bottom: 90px;
+    background: linear-gradient(0deg, #F5FBFF 0%, #F5FBFF 100%), #F4F8F9;
+}
+
+.portfolio__title {
+    margin-bottom: 30px;
+}
+
+.portfolio__cards {
+    display: flex;
+    column-gap: 30px;
+    row-gap: 50px;
+    flex-wrap: wrap;
+}
+
+.portfolio__tabs-buttons{
+    display: flex;
+    margin-bottom: 33px;
+    column-gap: 70px;
+}
+
+.portfolio__cards-hidden{
+    display: none;
+}
+
+

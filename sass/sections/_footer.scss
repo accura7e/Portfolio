@@ -1,0 +1,23 @@
+.footer {
+	margin-top: auto; /* sticky footer */
+    color: #fff;
+	background-color: #333333;
+	padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.footer__copyright {
+    font-size: 16px;
+    line-height: 1.4; /* 22.4px */
+    margin-bottom: 10px;
+}
+.footer__desc {
+    
+    color: #B0B0B0;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1.5; /* 24px */
+    span{
+        display: block;
+    }
+}
