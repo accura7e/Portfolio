@@ -49,15 +49,15 @@
 
 
 				<ul class="header__nav">
-					<li><a href="">Навыки</a></li>
-					<li><a href="">Портфолио</a></li>
-					<li><a href="">Как я работаю</a></li>
-					<li><a href="">Контакты</a></li>
+					<li><a href="#skills">Навыки</a></li>
+					<li><a href="#portfolio">Портфолио</a></li>
+					<li><a href="#stages">Как я работаю</a></li>
+					<li><a href="#contacts">Контакты</a></li>
 				</ul>
 
 				<div class="header__socials">
-					<a class="" href=""><img src="./img/socials/linkedin.svg" alt=""></a>
-					<a class="" href=""><img src="./img/socials/github.svg" alt=""></a>
+					<a class="header__socials-link" href=""><img src="./img/socials/linkedin.svg" alt=""></a>
+					<a class="header__socials-link" href=""><img src="./img/socials/github.svg" alt=""></a>
 				</div>
 			</div>
 
@@ -67,17 +67,21 @@
 
 	<main class="main">
 		<div class="menu__overlay"></div>
-		<div class="header__burger-menu">
+		<div class="burger__menu">
 
 			
-			<ul class="header__burger-nav">
-				<li><a href="">Навыки</a></li>
-				<li><a href="">Портфолио</a></li>
-				<li><a href="">Как я работаю</a></li>
-				<li><a href="">Контакты</a></li>
+			<ul class="burger__nav">
+				<li class="burger__nav-item"><a href="#skills">Навыки</a></li>
+				<li class="burger__nav-item"><a href="#portfolio">Портфолио</a></li>
+				<li class="burger__nav-item"><a href="#stages">Как я работаю</a></li>
+				<li class="burger__nav-item"><a href="#contacts">Контакты</a></li>
 			</ul>
-	
-			<div class="header__burger-socials">
+
+
+			<div class="burger__wrapper">
+
+			
+			<div class="burger__socials">
 				<div class="socials">
 					<a href="" class="socials__item">
 						<img src="./img/socials/telegram.svg" alt="telegram">
@@ -95,12 +99,12 @@
 						<img src="./img/socials/whatsapp.svg" alt="whatsapp">
 					</a>
 				</div>
+				
 			</div>
-	
 			<a href="mailto:yurij.kluchevsky@gmail.com" class="link">yurij.kluchevsky@gmail.com</a>
-	
 		</div>
-		<section class="author none">
+		</div>
+		<section class="author">
 			<div class="container">
 				<div class="author__top">
 					<div class="author__top-content">
@@ -181,7 +185,7 @@
 
 		</section>
 
-		<section class="portfolio none">
+		<section id="portfolio" class="portfolio">
 			<div class="container">
 				<div class="portfolio__title">
 					<h2 class="title-h2 grad-border">
@@ -217,7 +221,7 @@
 					<a href="" class="card card--big">
 						<div class="card__wrapper">
 							<div href="#" class="card__img">
-								<img src="./img/portfolio/02.jpg" alt="">
+								<img src="./img/portfolio/Unit.jpg" alt="">
 								<span>Смотреть проект</span>
 							</div>
 							<div class="card__text">
@@ -280,7 +284,7 @@
 					<a href="" class="card card--big">
 						<div class="card__wrapper">
 							<div href="#" class="card__img">
-								<img src="./img/portfolio/02.jpg" alt="">
+								<img src="./img/portfolio/Unit.jpg" alt="">
 								<span>Смотреть проект</span>
 							</div>
 							<div class="card__text">
@@ -332,7 +336,7 @@
 			</div>
 		</section>
 
-		<section class="stages none">
+		<section id="stages" class="stages">
 			<div class="container">
 				<div class="stages__title">
 					<h2 class="title-h2 grad-border">Как я работаю</h2>

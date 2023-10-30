@@ -1,6 +1,10 @@
 .socials{
     display: flex;
     column-gap: 30px;
+
+    @media (max-width: 1139px) {
+        column-gap: 20px;
+    }
 }
 
 .socials__item{
@@ -12,7 +16,7 @@
     }
 
     @media (max-width: 1139px) {
-
+    
     }
     
     /* Mobile */

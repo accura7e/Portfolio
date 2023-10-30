@@ -3,6 +3,20 @@
     font-size: 78px;
     font-weight: 700;
     line-height: 1;
+
+    @media (max-width: 1139px) {
+        font-size: 58px;
+    }
+    
+    /* Mobile */
+    @media (max-width: 899px) {
+        font-size: 42px;
+    }
+    
+    /* Mobile XS */
+    @media (max-width: 767px) {
+        font-size: 32px;
+    }
 }
 
 .main-title-wrapper{
@@ -15,4 +29,19 @@
     background-size: 100% 12px;
     background-repeat: no-repeat;
     background-image: linear-gradient(to right, $accent-color, $accent-color);
+    @media (max-width: 1139px) {
+        background-position: center bottom 12px;
+        background-size: 100% 10px;
+    }
+    
+    /* Mobile */
+    @media (max-width: 899px) {
+        background-position: center bottom 8px;
+        background-size: 100% 8px;
+    }
+    
+    /* Mobile XS */
+    @media (max-width: 767px) {
+        background-position: center bottom 4px;
+    }
 }
