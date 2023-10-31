@@ -6,7 +6,7 @@ tabBtns.forEach(function(item){
     item.addEventListener('click', function(){
         
         cardBoxes.forEach(function(item){
-                item.classList.add('none');
+                item.classList.add('hidden');
         });
 
         tabBtns.forEach(function(item){
@@ -15,7 +15,7 @@ tabBtns.forEach(function(item){
         const cardBtn = document.querySelector(`[data-tab='${this.dataset.tab}']`);
         const cardBox = document.querySelector(`#${this.dataset.tab}`);
 
-        cardBox.classList.remove('none')
+        cardBox.classList.remove('hidden')
         cardBtn.classList.add('tabs-btn--active')
 
     })
