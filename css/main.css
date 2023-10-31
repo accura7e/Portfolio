@@ -614,8 +614,10 @@ body > * {
 .form__item:nth-child(2) {
   margin-bottom: 30px;
 }
-.form__item .button {
-  width: 100%;
+@media (max-width: 767px) {
+  .form__item .button {
+    width: 100%;
+  }
 }
 
 .fake-placeholder {

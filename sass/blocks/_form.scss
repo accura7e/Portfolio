@@ -21,10 +21,14 @@
         margin-bottom: 30px;
     }
 
+    @media (max-width: 767px) {
+        .button{
+          width: 100%;  
+        }
 
-    .button{
-        width: 100%;
+        
     }
+
 }
 .fake-placeholder {
     position: absolute;
