@@ -28,7 +28,6 @@
     /* Mobile XS */
     @media (max-width: 767px) {
         flex-direction: column;
-        padding-bottom: 140px;
     }
 }
 .author__top-content {
@@ -64,8 +63,15 @@
     
     /* Mobile XS */
     @media (max-width: 767px) {
-        width: 220px;
         margin-bottom: 20px;
+    }
+}
+
+.author__top-text.author__top-text--bottom{
+    display: none;
+
+    @media (max-width: 767px) {
+        display: block;
     }
 }
 
@@ -86,8 +92,7 @@
     
     /* Mobile XS */
     @media (max-width: 767px) {
-        position: absolute;
-        bottom: 0;
+        display: none;
     }
 }
 .author__top-buttons {
@@ -104,6 +109,8 @@
     height: 410px;
     img{
         object-fit: cover;
+        height: 100%;
+        width: 100%;
         box-shadow: 40px 40px rgb(255, 255, 255, 0.5);
     }
 
@@ -121,7 +128,7 @@
     
     /* Mobile XS */
     @media (max-width: 767px) {
-    
+        margin-bottom: 10px;
     }
 }
 .author__middle {

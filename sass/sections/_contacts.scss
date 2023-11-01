@@ -105,15 +105,23 @@
 }
 .contacts__row-items {
     display: flex;
-    column-gap: 85px;
-    row-gap: 22px;
+
+
+    span{
+        min-width: 188px;
+
+        @media (max-width: 1139px){
+            min-width: unset;
+
+        }
+    }
     .link{
         line-height: 1.6;
     }
 
     @media (max-width: 1139px) {
         flex-direction: column;
-        row-gap: 0;
+
     }
     
 }

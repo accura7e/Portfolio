@@ -6,19 +6,16 @@
     &.grad-border{
         background-position: center bottom 4px;
         background-size: 100% 6px;
+
+        @media (max-width: 1139px) {
+            background-position: center bottom 2px;
+        }
+        
     }
 
     @media (max-width: 1139px) {
         font-size: 20px;
     }
     
-    /* Mobile */
-    @media (max-width: 899px) {
-    
-    }
-    
-    /* Mobile XS */
-    @media (max-width: 767px) {
-    
-    }
+
 }

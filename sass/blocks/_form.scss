@@ -6,6 +6,10 @@
     padding: 62px 50px 50px;
     box-shadow: 0px 20px 100px -10px rgba(160, 206, 237, 0.75);
 
+
+    @media (max-width: 899px){
+        padding: 40px 30px 30px;
+    }
     /* Mobile XS */
     @media (max-width: 767px) {
         padding: 44px 15px 40px;
@@ -91,9 +95,9 @@
     }
 }
 .form__input{
-    padding-bottom: 15px;
+    height: 39px;
 
     @media (max-width: 767px) {
-        padding-bottom: 10px;
+        height: 30px
     }
 }
