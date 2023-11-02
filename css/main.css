@@ -1670,4 +1670,13 @@ body > * {
   .contacts__row-text {
     font-size: 14px;
   }
+}
+
+.project {
+  padding-top: 90px;
+  padding-bottom: 70px;
+}
+
+.project__title {
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

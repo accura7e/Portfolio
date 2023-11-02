@@ -4,7 +4,6 @@
 
 
 
-
     const tabBtns = document.querySelectorAll('[data-tab]');
     const cardBoxes = document.querySelectorAll('[data-tab-content]')
 
