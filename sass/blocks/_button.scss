@@ -33,5 +33,14 @@
         padding: 16px 26px;
     }
     
-    
+    &--project{
+
+        border-radius: 0;
+        font-size: 16px;
+        font-weight: 400;
+
+        &:hover{
+            
+        }
+    }
 }

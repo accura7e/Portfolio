@@ -344,7 +344,11 @@ body > * {
     padding: 16px 26px;
   }
 }
-
+.button--project {
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
 .socials {
   display: flex;
   -moz-column-gap: 30px;
@@ -722,12 +726,14 @@ body > * {
 
 .header {
   padding-top: 60px;
+  padding-bottom: 60px;
   /* Mobile */
   /* Mobile XS */
 }
 @media (max-width: 899px) {
   .header {
     padding-top: 30px;
+    padding-bottom: 30px;
   }
   .header .container {
     width: 100%;
@@ -956,19 +962,18 @@ body > * {
 }
 
 .author {
-  padding-top: 82px;
+  padding-top: 22px;
   padding-bottom: 90px;
   /* Mobile */
   /* Mobile XS */
 }
 @media (max-width: 1139px) {
   .author {
-    padding: 60px 0;
+    padding-bottom: 60px;
   }
 }
 @media (max-width: 899px) {
   .author {
-    padding-top: 30px;
     padding-bottom: 40px;
   }
 }
@@ -1821,7 +1826,10 @@ body > * {
   }
 }
 
-.project__btn {
+.project__btns {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   margin-top: 60px;
-  text-align: center;
+  justify-content: center;
 }/*# sourceMappingURL=main.css.map */
