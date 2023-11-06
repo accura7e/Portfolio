@@ -23,7 +23,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-
+    z-index: 100;
 
     
     /* Mobile XS */
@@ -160,7 +160,8 @@
     margin-top: -93px;
     display: flex;
     column-gap: 30px;
-
+    position: relative;
+    z-index: 100;
     @media (max-width: 1139px) {
         margin-top: -67px;
     }

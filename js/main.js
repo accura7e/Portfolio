@@ -1,5 +1,16 @@
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
-
+if(ScrollTrigger.isTouch !==1){
+    
+        gsap.from('.header', {opacity: 0, duration: 1, y: -30, delay: .2})
+        gsap.from('.author__top-title', {opacity: 0, duration: 1, x: -100, delay: .1})
+        gsap.from('.author__top-text', {opacity: 0, duration: 1, x: -150, delay: .2})
+        gsap.from('.author__top-buttons', {opacity: 0, duration: 1, y: 50, delay: .2})
+        gsap.from('.author__top-img', {opacity: 0, duration: 1, x: 50, delay: .2})
+        gsap.from('.author__middle', {opacity: 0,duration: 2})
+        
+}
+    
 
 
 

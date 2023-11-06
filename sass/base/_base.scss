@@ -10,7 +10,7 @@ body {
 	min-height: 100vh; /* sticky footer */
 	display: flex; /* sticky footer */
 	flex-direction: column; /* sticky footer */
-
+    overflow-x: hidden;
 	font-family: 'Montserrat', sans-serif;
     color: $black-color;
     font-size: 16px;
