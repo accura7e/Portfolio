@@ -195,7 +195,7 @@ body > * {
 .author__top-buttons,
 .author__top-img,
 .author__middle {
-  will-change: transform;
+  will-change: transform opacity;
 }
 
 .main-title {

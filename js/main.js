@@ -2,12 +2,13 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
 if(ScrollTrigger.isTouch !==1){
     
-        gsap.from('.header', {opacity: 0, duration: 1, y: -30, delay: .2})
-        gsap.from('.author__top-title', {opacity: 0, duration: 1, x: -100, delay: .1})
-        gsap.from('.author__top-text', {opacity: 0, duration: 1, x: -150, delay: .2})
-        gsap.from('.author__top-buttons', {opacity: 0, duration: 1, y: 50, delay: .2})
-        gsap.from('.author__top-img', {opacity: 0, duration: 1, x: 50, delay: .2})
-        gsap.from('.author__middle', {opacity: 0,duration: 2})
+        gsap.fromTo('.header', {opacity: 0, y: -30}, {opacity: 1,duration: 1,y: 0,delay: 1.2})
+        gsap.fromTo('.author__top-title', {opacity: 0, x: -100}, {opacity: 1, duration: 1, x: 0, delay: 1.1})
+        gsap.fromTo('.author__top-text', {opacity: 0, y: 50}, {opacity: 1, duration: 1, y: 0, delay: 1.1})
+        gsap.fromTo('.author__top-buttons', {opacity: 0, y: 50}, {opacity: 1, duration: 1, y: 0, delay: 1.2})
+        gsap.fromTo('.author__top-img', {opacity: 0, x: 50}, {opacity: 1, duration: 1, x: 0, delay: 1.2})
+        gsap.fromTo('.author__middle', {opacity: 0}, {opacity: 1, duration: 1, delay: .8})
+      
         
 }
     
