@@ -1,8 +1,11 @@
 
 .author__top-title,
 .author__top-text,
-.author__top-buttons,
 .author__top-img,
 .author__middle{
     will-change: transform opacity;
+}
+
+.transparent{
+    opacity: 0;
 }

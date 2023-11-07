@@ -1,15 +1,225 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
+
+
 if(ScrollTrigger.isTouch !==1){
-    
-        gsap.fromTo('.header', {opacity: 0, y: -30}, {opacity: 1,duration: 1,y: 0,delay: 1.2})
-        gsap.fromTo('.author__top-title', {opacity: 0, x: -100}, {opacity: 1, duration: 1, x: 0, delay: 1.1})
-        gsap.fromTo('.author__top-text', {opacity: 0, y: 50}, {opacity: 1, duration: 1, y: 0, delay: 1.1})
-        gsap.fromTo('.author__top-buttons', {opacity: 0, y: 50}, {opacity: 1, duration: 1, y: 0, delay: 1.2})
-        gsap.fromTo('.author__top-img', {opacity: 0, x: 50}, {opacity: 1, duration: 1, x: 0, delay: 1.2})
-        gsap.fromTo('.author__middle', {opacity: 0}, {opacity: 1, duration: 1, delay: .8})
-      
+
+
+    const header = document.querySelector('.header')
+const authorTopTitle = document.querySelector('.author__top-title')
+const authorTopText = document.querySelector('.author__top-text')
+const authorTopImg = document.querySelector('.author__top-img')
+const buttonAuthorFirst = document.querySelector('.button-author--first')
+const buttonAuthorSecond = document.querySelector('.button-author--second')
+const authorMiddle = document.querySelector('.author__middle')
+
+const gsapItems = [
+        header,
+        authorTopTitle,
+        authorTopText,
+        authorTopImg,
+        buttonAuthorFirst,
+        buttonAuthorSecond,
+        authorMiddle
+    ]
+
+gsapItems.forEach(function(item){
+    item.classList.add('transparent')
+})
+
+
+
+
+        const tl = gsap.timeline()
+
+        tl.fromTo(
+            '.header',
+            {
+                opacity: 0,
+                y: -30
+            },
+            {
+                opacity: 1,
+                duration: 1.2,
+                y: 0,
+            },
+            1.2
+        ).fromTo(
+            '.author__top-title',
+            {
+
+                opacity: 0,
+                y: 100
+                
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                y: 0,
+                
+            },
+            .4
+        ).fromTo(
+            '.author__top-text',
+            {
+                opacity: 0,
+                y: 50
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                y: 0,
+            },
+            .8
+        ).fromTo(
+            '.author__top-img',
+            {
+                opacity: 0,
+                x: 50
+            }, {
+                opacity: 1,
+                duration: 1.3,
+                x: 0,
+            },
+            1
+        ).fromTo(
+            '.button-author--first',
+            {
+                opacity: 0,
+                y: 20
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                y: 0
+            },
+            1.7
+
+        ).fromTo(
+            '.button-author--second',
+            {
+                opacity: 0,
+                y: 20
+            },
+            {
+                opacity: 1,
+                duration: 1,
+                y: 0
+            },
+            2
+
+        ).fromTo(
+            '.author__middle',
+            {
+                opacity: 0,
+            },
+            {
+                opacity: 1,
+                duration: 3
+            },
+            2
+
+        )
+
+
+        gsap.to('.author__top',{
+            scrollTrigger:{
+                trigger: '.author__middle',
+                start: 'top 200',
+                scrub: true
+            },
+            yPercent: -100,
+            opacity: 0,
+            scale: 0.9
+        })
+
+        gsap.to('.author__middle img',{
+            scrollTrigger:{
+                trigger: '.author__middle',
+                start: 'top top',
+                scrub: true
+            },
+            opacity: 0,
+        })
+
+        gsap.fromTo('.author__bottom-skills',{
+
+            opacity: 0,
+            x: -50,
+            duration: 1,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.author__middle',
+                start: '90% center',
+          
+            },
+            opacity: 1,
+            x: 0,
+            duration: 1,
+        }
+
         
+        
+        )
+
+        gsap.fromTo('.author__bottom-links',{
+
+            opacity: 0,
+            x: 50,
+            duration: 1,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.author__middle',
+                start: '90% center',
+               
+                
+            },
+            opacity: 1,
+            x: 0,
+            duration: 1,
+        }
+
+        
+        
+        )
+        
+        gsap.to('.author__bottom',
+        {
+            scrollTrigger:{
+                trigger: '.portfolio',
+                start: '10% center',
+                end: '40% center',
+                scrub: true,
+                
+                
+            },
+            yPercent: -10,
+            opacity: 0,
+            scale: 0.9
+        }
+        )
+        gsap.fromTo('.portfolio',{
+
+            opacity: 0,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.portfolio',
+                start: '-20% top',
+                markers: true
+                
+            },
+            opacity: 1,
+            duration: 1,
+        }
+
+        
+        
+        )
+
+
 }
     
 
