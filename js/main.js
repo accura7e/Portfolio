@@ -189,8 +189,8 @@ gsapItems.forEach(function(item){
         {
             scrollTrigger:{
                 trigger: '.portfolio',
-                start: '10% center',
-                end: '40% center',
+                start: '20% center',
+                end: '60% center',
                 scrub: true,
                 
                 
@@ -207,19 +207,120 @@ gsapItems.forEach(function(item){
         {
             scrollTrigger:{
                 trigger: '.portfolio',
-                start: '-20% top',
-                markers: true
+                start: '-35% top',
+
                 
             },
             opacity: 1,
-            duration: 1,
+            duration: 2,
         }
 
         
         
         )
+        gsap.fromTo('.portfolio__title',{
+            x: -50,
+            opacity: 0,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.portfolio',
+                start: '-35% top',
+             
+                
+            },
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.2
+        }
 
+        
+        
+        )
+        gsap.fromTo('.tabs-btn--second',{
+            x: -50,
+            opacity: 0,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.portfolio',
+                start: '-35% top',
+        
+                
+            },
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.75
+        }
 
+        
+        
+        )
+        gsap.fromTo('.tabs-btn--third',{
+            x: -50,
+            opacity: 0,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.portfolio',
+                start: '-35% top',
+                
+            },
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 2
+        }  
+    )
+        gsap.fromTo('.tabs-btn--first',{
+            x: -50,
+            opacity: 0,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.portfolio',
+                start: '-35% top',
+
+                
+            },
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.5
+        }
+    )
+
+    gsap.from('.card',
+        {
+            scrollTrigger: {
+                trigger: '.portfolio',
+                markers: true,
+                start: '-35% top',
+            },
+            delay: 2.3,
+            duration: 1,
+            opacity: 0,
+            stagger: 0.45,
+        }
+    )
+    gsap.fromTo('.stages',{
+
+        opacity: 0,
+    },
+    {
+        scrollTrigger:{
+            trigger: '.stages',
+            start: '-10% top',
+        },
+        opacity: 1,
+        duration: 2,
+    }
+
+    
+    
+    )
 }
     
 
