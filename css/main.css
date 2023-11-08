@@ -782,12 +782,14 @@ body > * {
 }
 
 .header__burger.header__burger--sticky {
+  pointer-events: none;
   top: 7px;
   opacity: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .header__burger.header__burger--sticky.header__burger--sticky--active {
+  pointer-events: all;
   opacity: 1;
   position: fixed;
 }
@@ -859,6 +861,10 @@ body > * {
 
 .burger__wrapper {
   margin-top: auto;
+}
+
+.header__title-project {
+  transform: translateY(20px);
 }
 
 .menu__overlay {
