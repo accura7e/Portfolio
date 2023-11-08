@@ -281,31 +281,6 @@
 									</div>
 								</div>
 							</a>
-							<a href="" data-speed="1.6" class="card">
-								<div class="card__wrapper">
-									<div class="card__img">
-										<img src="./img/portfolio/04.jpg" alt="">
-										<span>Смотреть проект</span>
-		
-									</div>
-									<div class="card__text">
-										<h4 class="card__title">Верстка “Мир Авто”</h4>
-										<p>Верстка многостраничного сайта</p>
-									</div>
-								</div>
-							</a>
-							<a href="" data-speed="1.8" class="card">
-								<div class="card__wrapper">
-									<div class="card__img">
-										<img src="./img/portfolio/05.jpg" alt="">
-										<span>Смотреть проект</span>
-									</div>
-									<div class="card__text">
-										<h4 class="card__title">Верстка “Мир Авто”</h4>
-										<p>Верстка многостраничного сайта</p>
-									</div>
-								</div>
-							</a>
 						</div>
 						<div class="portfolio__cards hidden" data-tab-content id="tab-2">
 							<a href="./forestTravel.html" class="card card--big">
@@ -347,30 +322,7 @@
 									</div>
 								</div>
 							</a>
-							<a href="" class="card">
-								<div class="card__wrapper">
-									<div class="card__img">
-										<img src="./img/portfolio/04.jpg" alt="">
-										<span>Смотреть проект</span>
-									</div>
-									<div class="card__text">
-										<h4 class="card__title">Верстка “Мир Авто”</h4>
-										<p>Верстка многостраничного сайта</p>
-									</div>
-								</div>
-							</a>
-							<a href="" class="card">
-								<div class="card__wrapper">
-									<div class="card__img">
-										<img src="./img/portfolio/05.jpg" alt="">
-										<span>Смотреть проект</span>
-									</div>
-									<div class="card__text">
-										<h4 class="card__title">Верстка “Мир Авто”</h4>
-										<p>Верстка многостраничного сайта</p>
-									</div>
-								</div>
-							</a>
+
 						</div>
 					</div>
 				</section>
@@ -458,7 +410,7 @@
 								<div class="contacts__row-links">
 									<div class="contacts__row-items">
 										<span>Email</span>
-										<a href="metrika987@gmail.com" class="link">metrika987@gmail.com</a>
+										<a href="mailto:metrika987@gmail.com" class="link">metrika987@gmail.com</a>
 									</div>
 								</div>
 		
@@ -479,22 +431,28 @@
 								<form id="form" class="form">
 									<div class="form__item">
 										<span class="fake-placeholder">Ваш Email</span>
-										<input required name="email" type="email"
+										<input  name="email"
 											class="form__item-field form__input">
 									</div>
 									<div class="form__item">
 										<span class="fake-placeholder">Сообщение</span>
-										<textarea required name="message" class="form__item-field form__textarea"></textarea>
+										<textarea  name="message"  class="form__item-field form__textarea"></textarea>
 									</div>
 									<div class="form__item">
-										<button type="submit" class="button form__btn">Отправить</button>
+										<input type="submit" value="Отправить" class="button form__btn"></input>
 									</div>
 								</form>
+								<div id="answer"></div>
 							</div>
 		
 						</div>
 		
 		
+					</div>
+
+
+					<div class="contact__quots">
+						<img src="./img/dots/contacts-icon.svg.svg" alt="">
 					</div>
 				</section>
 
@@ -517,6 +475,10 @@
 			</div>
 		</div>
 	</footer>
+	
+	<script src="./libs/jquery/jquery-3.0.0.min.js"></script>
+	<script src="./libs/jquery/jquery.validate.min.js"></script>
+	
 	<script src="./js/main.js" defer></script>
 	<script src="./libs/gsap/gsap.min.js" ></script>
 	<script src="./libs/gsap/ScrollTrigger.min.js" ></script>
@@ -526,27 +488,15 @@
 
 </html>
 
-<!-- <div class="contacts__row-subtitles">
-						<p>Email</p>
-						<p>Телефон</p>
-					</div>
-					<div class="contacts__row-links">
-						<a href="mailto:yurij.kluchevsky@gmail.com" class="link">yurij.kluchevsky@gmail.com</a>
-						<a href="tel::+79801234567" class="link">+7 (980) 123-45-67</a>
-					</div>
-					<div class="contacts__row-text">
-						<p>Если вы ищите специалиста по верстке сайтов или frontend разработчика в команду для работы
-							над проектом — напишите мне.
-						</p>
-					</div> -->
-
-
-<!-- <div class="card">
-			<div class="card__wrapper">
-				<div class="card__img">
-					<img src="" alt="">
-				</div>
-				<h4 class="card__title"></h4>
-				<h4 class="card__text"></h4>
-			</div>
-		</div> -->
+<!-- <a href="" data-speed="1.4" class="card">
+	<div class="card__wrapper">
+		<div class="card__img">
+			<img src="./img/portfolio/03.jpg" alt="">
+			<span>Смотреть проект</span>
+		</div>
+		<div class="card__text">
+			<h4 class="card__title">Верстка “Мир Авто”</h4>
+			<p>Верстка многостраничного сайта</p>
+		</div>
+	</div>
+</a> -->

@@ -20,22 +20,23 @@
         padding-bottom: 50px;
     }
 
-    &::before{
-        content: '';
-        z-index: 1;
-        position: absolute;
-        background-image: url('./../img/dots/contacts-icon.svg.svg');
-        background-position: center center; /* x y */
-        background-size: cover;
-        background-repeat: no-repeat;
-        right: 4%;
-        top: 30%;
-        transform: translateY(-50%);
-        width: 280px;
-        height: 243px;
-        @media (max-width: 899px) {
-            display: none;
-        }
+
+}
+
+.contact__quots{
+    z-index: 1;
+    position: absolute;
+    background-image: url('./../img/dots/contacts-icon.svg.svg');
+    background-position: center center; /* x y */
+    background-size: cover;
+    background-repeat: no-repeat;
+    right: 4%;
+    top: 10%;
+    width: 280px;
+    height: 243px;
+    transform: translate .3;
+    @media (max-width: 899px) {
+        display: none;
     }
 }
 
