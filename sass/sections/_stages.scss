@@ -40,7 +40,7 @@
 .stages__wrapper {
     width: 900px;
     margin: 0 auto;
-
+    transform-origin: top;
     @media (max-width: 1139px) {
         width: 774px;
     }

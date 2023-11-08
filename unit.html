@@ -17,7 +17,7 @@
 
 	<!-- js -->
 
-	<script src="./js/main.js" defer></script>
+
 	<!-- Open Graph -->
 	<!-- <meta property="og:url" content="https://webcademy.ru/" /> -->
 	<meta property="og:type" content="website" />
@@ -39,7 +39,7 @@
 <body>
 
 
-	<header class="header">
+	<header class="header header--project">
 
 
 
@@ -53,13 +53,11 @@
 					<span></span>
 				</button>
 
-
-				<ul class="header__nav">
-					<li><a href="./index.html#skills">Навыки</a></li>
-					<li><a href="./index.html#portfolio">Портфолио</a></li>
-					<li><a href="./index.html#stages">Как я работаю</a></li>
-					<li><a href="./index.html#contacts">Контакты</a></li>
-				</ul>
+				<div class="header__nav">
+					<a class="header__logo" href="index.html">
+						<img src="./img/icons/logo.jpg" alt="">
+					</a>
+				</div>
 
 				<div class="header__socials">
 					<a class="header__socials-link" target="_blank" href="https://github.com/accura7e"><img
@@ -114,7 +112,7 @@
 
 				<div class="project__row">
 					<div class="project__info">
-						<div class="project__info-links">
+						<div class="project__info-item project__info-links">
 							<div class="project__info-title">
 								<h3 class="title-h3 grad-border">Ссылки на проект</h3>
 							</div>
@@ -131,7 +129,7 @@
 							</div>
 
 						</div>
-						<div class="project__info-desс">
+						<div class="project__info-item project__info-desс">
 							<div class="project__info-title">
 								<h3 class="title-h3 grad-border">О проекте</h3>
 							</div>
@@ -141,7 +139,7 @@
 									</p>
 							</div>
 						</div>
-						<div class="project__info-details">
+						<div class="project__info-item project__info-details">
 							<div class="project__info-title">
 								<h3 class="title-h3 grad-border">Детали</h3>
 							</div>
@@ -199,7 +197,10 @@
 	</footer>
 
 
-
+	<script src="./js/project-1.js" defer></script>
+	<script src="./libs/gsap/gsap.min.js" ></script>
+	<script src="./libs/gsap/ScrollTrigger.min.js" ></script>
+	<script src="./libs/gsap/ScrollSmoother.min.js" ></script>
 </body>
 
 </html>

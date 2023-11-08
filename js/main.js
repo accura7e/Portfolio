@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, )
 
 
 
@@ -12,6 +12,12 @@ const authorTopImg = document.querySelector('.author__top-img')
 const buttonAuthorFirst = document.querySelector('.button-author--first')
 const buttonAuthorSecond = document.querySelector('.button-author--second')
 const authorMiddle = document.querySelector('.author__middle')
+const cards = document.querySelectorAll('.card')
+const socials = document.querySelectorAll('.contacts__socials .socials__item')
+
+socials.forEach(function(item){
+    item.classList.add('transparent')
+})
 
 const gsapItems = [
         header,
@@ -20,12 +26,17 @@ const gsapItems = [
         authorTopImg,
         buttonAuthorFirst,
         buttonAuthorSecond,
-        authorMiddle
+        authorMiddle,
     ]
 
 gsapItems.forEach(function(item){
     item.classList.add('transparent')
 })
+cards.forEach(function(item){
+    item.classList.add('transparent')
+})
+
+
 
 
 
@@ -121,6 +132,7 @@ gsapItems.forEach(function(item){
 
         )
 
+        //author
 
         gsap.to('.author__top',{
             scrollTrigger:{
@@ -132,7 +144,6 @@ gsapItems.forEach(function(item){
             opacity: 0,
             scale: 0.9
         })
-
         gsap.to('.author__middle img',{
             scrollTrigger:{
                 trigger: '.author__middle',
@@ -141,7 +152,6 @@ gsapItems.forEach(function(item){
             },
             opacity: 0,
         })
-
         gsap.fromTo('.author__bottom-skills',{
 
             opacity: 0,
@@ -162,7 +172,6 @@ gsapItems.forEach(function(item){
         
         
         )
-
         gsap.fromTo('.author__bottom-links',{
 
             opacity: 0,
@@ -184,7 +193,6 @@ gsapItems.forEach(function(item){
         
         
         )
-        
         gsap.to('.author__bottom',
         {
             scrollTrigger:{
@@ -200,6 +208,9 @@ gsapItems.forEach(function(item){
             scale: 0.9
         }
         )
+
+        //portfolio
+
         gsap.fromTo('.portfolio',{
 
             opacity: 0,
@@ -212,7 +223,7 @@ gsapItems.forEach(function(item){
                 
             },
             opacity: 1,
-            duration: 2,
+            duration: 1.2,
         }
 
         
@@ -232,11 +243,28 @@ gsapItems.forEach(function(item){
             x: 0,
             opacity: 1,
             duration: 1,
-            delay: 1.2
+            delay: 1
         }
 
         
         
+        )
+        gsap.fromTo('.tabs-btn--first',{
+            x: -50,
+            opacity: 0,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.portfolio',
+                start: '-35% top',
+
+                
+            },
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.25
+        }
         )
         gsap.fromTo('.tabs-btn--second',{
             x: -50,
@@ -252,7 +280,7 @@ gsapItems.forEach(function(item){
             x: 0,
             opacity: 1,
             duration: 1,
-            delay: 1.75
+            delay: 1.5
         }
 
         
@@ -271,56 +299,253 @@ gsapItems.forEach(function(item){
             x: 0,
             opacity: 1,
             duration: 1,
-            delay: 2
+            delay: 1.75
         }  
-    )
-        gsap.fromTo('.tabs-btn--first',{
-            x: -50,
+        )
+        gsap.to('.portfolio__cards',
+        {
+            scrollTrigger:{
+                trigger: '.stages',
+                start: '20% center',
+                end: '60% center',
+                scrub: true,
+                
+                
+            },
+            yPercent: -10,
+            opacity: 0,
+            scale: 0.9
+        }
+        )
+        gsap.to('.card',
+            {
+                scrollTrigger: {
+                    trigger: '.portfolio',
+                   
+                    start: '-35% top',
+                },
+                delay: 2,
+                duration: 1,
+                opacity: 1,
+                stagger: 0.45,
+            },
+
+        )
+
+        //stages
+
+
+        gsap.fromTo('.stages__title',{
+            y: -30,
             opacity: 0,
         },
         {
             scrollTrigger:{
-                trigger: '.portfolio',
-                start: '-35% top',
-
-                
+                trigger: '.stages',
+                start: '-10% top',
             },
-            x: 0,
+            y: 0,
             opacity: 1,
             duration: 1,
-            delay: 1.5
+            delay: .8
         }
-    )
 
-    gsap.from('.card',
-        {
-            scrollTrigger: {
-                trigger: '.portfolio',
-                markers: true,
-                start: '-35% top',
+        
+        
+        )
+        gsap.fromTo('.stages__wrapper',{
+                
+                opacity: 0,
             },
-            delay: 2.3,
-            duration: 1,
+            {
+                scrollTrigger:{
+                    trigger: '.stages',
+                    start: '-10% top',
+                },
+                y: 0,
+                opacity: 1,
+                duration: 2,
+                delay: 1.2, 
+            }
+        )
+        gsap.fromTo('.contacts',{
+                    opacity: 0,
+                },
+                {
+                    scrollTrigger:{
+                        trigger: '.contacts',
+                        start: '-10% center',
+                        
+                    },
+                    opacity: 1,
+                    duration: 1,
+            
+                }
+        )
+        gsap.fromTo('.contacts__title',{
+                    y: -30,
+                    opacity: 0,
+                },
+                {
+                    scrollTrigger:{
+                        trigger: '.contacts',
+                        start: '-10% center',
+                        
+                    },
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    delay: .8
+                }
+        )
+                
+        gsap.fromTo('.contacts__row-text',{
+                x: -50,
+                opacity: 0,
+            },
+            {
+                scrollTrigger:{
+                    trigger: '.contacts',
+                    start: '-10% center',
+                    
+                },
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                delay: 1.2,
+                easeIn: true
+            }
+        )
+
+        gsap.fromTo('.contacts__row-items span',{
+            y: 50,
             opacity: 0,
-            stagger: 0.45,
-        }
-    )
-    gsap.fromTo('.stages',{
-
-        opacity: 0,
-    },
-    {
-        scrollTrigger:{
-            trigger: '.stages',
-            start: '-10% top',
         },
-        opacity: 1,
-        duration: 2,
-    }
+        {
+            scrollTrigger:{
+                trigger: '.contacts',
+                start: '-10% center',
+                
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.3
+        }
+        )
 
-    
-    
-    )
+        gsap.fromTo('.contacts__row-items a',{
+            y: 50,
+            opacity: 0,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.contacts',
+                start: '-10% center',
+                
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.7
+        }
+        )
+
+        gsap.fromTo('.contacts__row-items a',{
+            y: 50,
+            opacity: 0,
+        },
+        {
+            scrollTrigger:{
+                trigger: '.contacts',
+                start: '-10% center',
+                
+            },
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            delay: 1.7
+        }
+        )
+
+        gsap.fromTo('.contacts__socials a',
+        {
+            y: 50,
+            opacity: 0,
+        },
+
+        {
+
+            scrollTrigger:{
+                trigger: '.contacts',
+                start: '-10% center',
+               
+            },
+            y: 0,
+            delay: 2.2,
+            duration: 1,
+            opacity: 1,
+            stagger: .5
+        }
+        )
+        gsap.fromTo('.form__item button',
+        {
+            y: 50,
+            opacity: 0,
+        },
+
+        {
+
+            scrollTrigger:{
+                trigger: '.contacts',
+                start: '-10% center',
+               
+            },
+            y: 0,
+            delay: 2.5,
+            duration: 1,
+            opacity: 1,
+        }
+        )
+        gsap.fromTo('.footer',
+        {
+            
+            opacity: 0,
+        },
+
+        {
+
+            scrollTrigger:{
+                trigger: '.contacts',
+                start: '-30% center',
+               
+            },
+            
+            delay: 1,
+            duration: 3,
+            opacity: 1,
+        }
+        )
+        gsap.fromTo('.contacts__form',
+        {
+            y: 50,
+            opacity: 0,
+        },
+
+        {
+
+            scrollTrigger:{
+                trigger: '.contacts',
+                start: '-10% center',
+
+               
+            },
+            y: 0,
+            delay: 2.2,
+            duration: 1,
+            opacity: 1,
+        }
+        )      
 }
     
 
@@ -372,22 +597,36 @@ gsapItems.forEach(function(item){
     
     })
 
-    const burgerBtn = document.querySelector('.header__burger');
+    const burgerBtn = document.querySelectorAll('.header__burger');
     const burgerNav = document.querySelector('.burger__menu');
     const burgerOverlay = document.querySelector('.menu__overlay')
     const burgerNavItems = document.querySelectorAll('.burger__nav-item')
-
-    burgerBtn.addEventListener('click', function(){
-        burgerBtn.classList.toggle('header__burger--active')
+    // const body = document.querySelector(body)
+    burgerBtn.forEach(function(item){
+        item.addEventListener('click', function(){
+        item.classList.toggle('header__burger--active')
         burgerNav.classList.toggle('burger__menu--active')
-        burgerOverlay.classList.toggle('menu__overlay--active')  
+        burgerOverlay.classList.toggle('menu__overlay--active')   
     })
+    })
+
     burgerNavItems.forEach(function(item){
         item.addEventListener('click', function(){
-            burgerBtn.classList.remove('header__burger--active')
+            burgerBtn.forEach(function(item){
+                item.classList.remove('header__burger--active')
+            })
             burgerNav.classList.remove('burger__menu--active')
             burgerOverlay.classList.remove('menu__overlay--active')  
         })
+    })
+
+
+    window.addEventListener('scroll', function(){
+       
+        const stickyHeader = document.querySelector('.header-sticky')
+        stickyHeader.classList.toggle('sticky--active', window.scrollY > 250)
+        const stickyBurger = document.querySelector('.header__burger--sticky')
+        stickyBurger.classList.toggle('header__burger--sticky--active', window.scrollY > 250)
     })
 
 
