@@ -223,7 +223,7 @@ cards.forEach(function(item){
                 
             },
             opacity: 1,
-            duration: 1.2,
+            duration: .2,
         }
 
         
@@ -243,7 +243,7 @@ cards.forEach(function(item){
             x: 0,
             opacity: 1,
             duration: 1,
-            delay: 1
+            delay: .3
         }
 
         
@@ -263,7 +263,7 @@ cards.forEach(function(item){
             x: 0,
             opacity: 1,
             duration: 1,
-            delay: 1.25
+            delay: .7
         }
         )
         gsap.fromTo('.tabs-btn--second',{
@@ -280,7 +280,7 @@ cards.forEach(function(item){
             x: 0,
             opacity: 1,
             duration: 1,
-            delay: 1.5
+            delay: .9
         }
 
         
@@ -299,7 +299,7 @@ cards.forEach(function(item){
             x: 0,
             opacity: 1,
             duration: 1,
-            delay: 1.75
+            delay: 1.1
         }  
         )
         gsap.to('.portfolio__cards',
@@ -324,7 +324,7 @@ cards.forEach(function(item){
                    
                     start: '-35% top',
                 },
-                delay: 2,
+                delay: 1,
                 duration: 1,
                 opacity: 1,
                 stagger: 0.45,
@@ -342,12 +342,12 @@ cards.forEach(function(item){
         {
             scrollTrigger:{
                 trigger: '.stages',
-                start: '-10% top',
+                start: '-10% 70%',
             },
             y: 0,
             opacity: 1,
             duration: 1,
-            delay: .8
+            delay: .4
         }
 
         
@@ -360,12 +360,12 @@ cards.forEach(function(item){
             {
                 scrollTrigger:{
                     trigger: '.stages',
-                    start: '-10% top',
+                    start: '-10% 70%',
                 },
                 y: 0,
                 opacity: 1,
                 duration: 2,
-                delay: 1.2, 
+                delay: .7, 
             }
         )
         gsap.fromTo('.contacts',{
@@ -378,7 +378,7 @@ cards.forEach(function(item){
                         
                     },
                     opacity: 1,
-                    duration: 1,
+                    duration: .2,
             
                 }
         )
@@ -395,7 +395,7 @@ cards.forEach(function(item){
                     y: 0,
                     opacity: 1,
                     duration: 1,
-                    delay: .8
+                    delay: .4
                 }
         )
                 
@@ -412,7 +412,7 @@ cards.forEach(function(item){
                 x: 0,
                 opacity: 1,
                 duration: 1,
-                delay: 1.2,
+                delay: .8,
                 easeIn: true
             }
         )
@@ -430,7 +430,7 @@ cards.forEach(function(item){
             y: 0,
             opacity: 1,
             duration: 1,
-            delay: 1.3
+            delay: .9
         }
         )
 
@@ -447,26 +447,26 @@ cards.forEach(function(item){
             y: 0,
             opacity: 1,
             duration: 1,
-            delay: 1.7
+            delay: 1.1
         }
         )
 
-        gsap.fromTo('.contacts__row-items a',{
-            y: 50,
-            opacity: 0,
-        },
-        {
-            scrollTrigger:{
-                trigger: '.contacts',
-                start: '-10% center',
+        // gsap.fromTo('.contacts__row-items a',{
+        //     y: 50,
+        //     opacity: 0,
+        // },
+        // {
+        //     scrollTrigger:{
+        //         trigger: '.contacts',
+        //         start: '-10% center',
                 
-            },
-            y: 0,
-            opacity: 1,
-            duration: 1,
-            delay: 1.7
-        }
-        )
+        //     },
+        //     y: 0,
+        //     opacity: 1,
+        //     duration: 1,
+        //     delay: 1.7
+        // }
+        // )
 
         gsap.fromTo('.contacts__socials a',
         {
@@ -482,7 +482,7 @@ cards.forEach(function(item){
                
             },
             y: 0,
-            delay: 2.2,
+            delay: 1.5,
             duration: 1,
             opacity: 1,
             stagger: .5
@@ -502,7 +502,7 @@ cards.forEach(function(item){
                
             },
             y: 0,
-            delay: 2.5,
+            delay: 2,
             duration: 1,
             opacity: 1,
         }
@@ -522,7 +522,7 @@ cards.forEach(function(item){
             },
             
             delay: 1,
-            duration: 3,
+            duration: 2,
             opacity: 1,
         }
         )
@@ -541,7 +541,7 @@ cards.forEach(function(item){
                
             },
             y: 0,
-            delay: 2.2,
+            delay: 1.7,
             duration: 1,
             opacity: 1,
         }

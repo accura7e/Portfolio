@@ -109,8 +109,8 @@ if(ScrollTrigger.isTouch !==1){
             start: 'top bottom',
         },
         
-        delay: 1,
-        duration: 3,
+
+        duration: 1,
         opacity: 1,
     }
     )

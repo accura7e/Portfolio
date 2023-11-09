@@ -954,11 +954,12 @@ body > * {
   height: 1px;
   width: 100%;
   transform: scaleX(0);
-  transform-origin: left;
-  transition: 0.3s;
+  transform-origin: right;
+  transition: transform 0.3s ease-in-out;
 }
 .header__nav a:hover::before {
   transform: scaleX(1);
+  transform-origin: left;
 }
 @media (max-width: 1139px) {
   .header__nav {

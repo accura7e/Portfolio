@@ -229,17 +229,19 @@ pointer-events: none;
             height: 1px;
             width: 100%;
             transform: scaleX(0);
-            transform-origin: left;
-            transition: .3s;
+            transform-origin: right;
+            transition: transform .3s ease-in-out;
         }
         &:hover{
             &::before{
                 transform: scaleX(1);
-                
+                transform-origin: left;
             }
         }
 
     }
+
+
 
     @media (max-width: 1139px) {
         column-gap: 50px;
