@@ -745,8 +745,13 @@ body > * {
 }
 
 .header {
+  position: fixed;
+  z-index: 990;
+  width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
+  transition: top 0.8s ease-in-out, padding 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+  background-color: #fff;
   /* Mobile */
   /* Mobile XS */
 }
@@ -760,53 +765,30 @@ body > * {
     max-width: 899px;
   }
 }
-.header-sticky {
-  position: fixed;
-  z-index: 900;
-  opacity: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 10px 0;
-  animation-duration: 1s;
-  animation-name: fadeIn;
-  background-color: #fff;
-  box-shadow: 0px 5px 10px -5px rgba(34, 60, 80, 0.6);
-  transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-.header-sticky.sticky--active {
-  pointer-events: all;
-  opacity: 1;
-}
-
-.header__burger.header__burger--sticky {
-  pointer-events: none;
-  top: 7px;
-  opacity: 0;
-  z-index: 999;
-}
-
-.header__burger.header__burger--sticky.header__burger--sticky--active {
-  pointer-events: all;
-  opacity: 1;
-  position: fixed;
+.header.sticky--active {
+  box-shadow: 0px 4px 7px 0px rgba(34, 60, 80, 0.2);
+  padding: 30px 0;
 }
 
 .header.header--project {
-  padding: 10px 0;
+  padding: 0px 0;
+}
+@media (max-width: 899px) {
+  .header.header--project {
+    padding: 30px 0;
+  }
 }
 
 .header__burger {
-  z-index: 1000;
+  position: fixed;
+  z-index: 1001;
   display: none;
   width: 40px;
   height: 25px;
-  position: absolute;
   right: 15px;
   top: 26px;
   background-color: transparent;
+  transition: all 1s;
 }
 .header__burger span {
   position: absolute;
@@ -1049,6 +1031,7 @@ body > * {
 .author {
   padding-top: 22px;
   padding-bottom: 90px;
+  margin-top: 162px;
   /* Mobile */
   /* Mobile XS */
 }
@@ -1059,6 +1042,7 @@ body > * {
 }
 @media (max-width: 899px) {
   .author {
+    margin-top: 80px;
     padding-bottom: 40px;
   }
 }
@@ -1881,6 +1865,15 @@ body > * {
 .project__info-list-link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.project {
+  margin-top: 162px;
+}
+@media (max-width: 899px) {
+  .project {
+    margin-top: 80px;
+  }
 }
 
 .project__info-details-items {

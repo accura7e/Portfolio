@@ -552,29 +552,29 @@ cards.forEach(function(item){
 
 
 
-    const tabBtns = document.querySelectorAll('[data-tab]');
-    const cardBoxes = document.querySelectorAll('[data-tab-content]')
+    // const tabBtns = document.querySelectorAll('[data-tab]');
+    // const cardBoxes = document.querySelectorAll('[data-tab-content]')
 
-    tabBtns.forEach(function(item){
+    // tabBtns.forEach(function(item){
 
-        item.addEventListener('click', function(){
+    //     item.addEventListener('click', function(){
             
-            cardBoxes.forEach(function(item){
-                    item.classList.add('hidden');
-            });
+    //         cardBoxes.forEach(function(item){
+    //                 item.classList.add('hidden');
+    //         });
 
-            tabBtns.forEach(function(item){
-                item.classList.remove('tabs-btn--active')
-            });
-            const cardBtn = document.querySelector(`[data-tab='${this.dataset.tab}']`);
-            const cardBox = document.querySelector(`#${this.dataset.tab}`);
+    //         tabBtns.forEach(function(item){
+    //             item.classList.remove('tabs-btn--active')
+    //         });
+    //         const cardBtn = document.querySelector(`[data-tab='${this.dataset.tab}']`);
+    //         const cardBox = document.querySelector(`#${this.dataset.tab}`);
 
-            cardBox.classList.remove('hidden')
-            cardBtn.classList.add('tabs-btn--active')
+    //         cardBox.classList.remove('hidden')
+    //         cardBtn.classList.add('tabs-btn--active')
 
-        })
+    //     })
         
-    })
+    // })
 
     const formFields = document.querySelectorAll('.form__item-field');
 
@@ -601,7 +601,7 @@ cards.forEach(function(item){
     const burgerNav = document.querySelector('.burger__menu');
     const burgerOverlay = document.querySelector('.menu__overlay')
     const burgerNavItems = document.querySelectorAll('.burger__nav-item')
-    // const body = document.querySelector(body)
+
     burgerBtn.forEach(function(item){
         item.addEventListener('click', function(){
         item.classList.toggle('header__burger--active')
@@ -609,6 +609,17 @@ cards.forEach(function(item){
         burgerOverlay.classList.toggle('menu__overlay--active')   
     })
     })
+    
+    window.addEventListener('scroll', function(){
+
+        const header = document.querySelector('.header')
+        
+        header.classList.toggle('sticky--active', window.scrollY > 200)
+                
+    })
+
+    // const body = document.querySelector(body)
+
 
     burgerNavItems.forEach(function(item){
         item.addEventListener('click', function(){
@@ -620,14 +631,6 @@ cards.forEach(function(item){
         })
     })
 
-
-    window.addEventListener('scroll', function(){
-       
-        const stickyHeader = document.querySelector('.header-sticky')
-        stickyHeader.classList.toggle('sticky--active', window.scrollY > 250)
-        const stickyBurger = document.querySelector('.header__burger--sticky')
-        stickyBurger.classList.toggle('header__burger--sticky--active', window.scrollY > 250)
-    })
 
 
     $(document).ready(function () {

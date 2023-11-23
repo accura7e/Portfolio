@@ -128,7 +128,13 @@ burgerBtn.forEach(function(item){
     burgerOverlay.classList.toggle('menu__overlay--active')   
 })
 })
+window.addEventListener('scroll', function(){
 
+    const header = document.querySelector('.header')
+    
+    header.classList.toggle('sticky--active', window.scrollY > 200)
+            
+})
 burgerNavItems.forEach(function(item){
     item.addEventListener('click', function(){
         burgerBtn.forEach(function(item){

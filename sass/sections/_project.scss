@@ -117,6 +117,15 @@
     }
 }
 
+.project{
+    margin-top: 162px;
+
+    @media(max-width: 899px){
+    margin-top: 80px;
+    }
+
+}
+
 .project__info-details-items {
     max-width: 500px;
     display: flex;
