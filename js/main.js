@@ -2,7 +2,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, )
 
 
 
-if(ScrollTrigger.isTouch !==1){
 
 
     const header = document.querySelector('.header')
@@ -546,7 +545,7 @@ cards.forEach(function(item){
             opacity: 1,
         }
         )      
-}
+
     
 
 
